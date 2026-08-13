@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spencer Betchey — CS Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #f8f9fb;
-      --bg2:       #ffffff;
-      --bg3:       #f0f2f5;
-      --border:    #e2e5ea;
-      --text:      #1a1d23;
-      --muted:     #6b7280;
-      --light:     #9ca3af;
-      --accent:    #2563eb;
-      --accent-lt: #eff4ff;
-      --accent-md: #bfcffe;
-      --radius:    8px;
-      --sans:      'Geist', system-ui, sans-serif;
-      --mono:      'Geist Mono', monospace;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #f8f9fb;
+      --bg2: #ffffff;
+      --bg3: #f0f2f5;
+      --border: #e2e5ea;
+      --text: #1a1d23;
+      --muted: #6b7280;
+      --light: #9ca3af;
+      --accent: #2563eb;
+      --accent-lt: #eff4ff;
+      --accent-md: #bfcffe;
+      --radius: 8px;
+      --sans: 'Geist', system-ui, sans-serif;
+      --mono: 'Geist Mono', monospace;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -36,14 +47,25 @@
       font-size: 15px;
     }
 
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--accent-md); border-radius: 2px; }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-md);
+      border-radius: 2px;
+    }
 
     /* NAV */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       display: flex;
       justify-content: space-between;
@@ -56,7 +78,9 @@
       transition: box-shadow 0.2s;
     }
 
-    nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+    nav.scrolled {
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    }
 
     .nav-logo {
       font-size: 0.92rem;
@@ -100,7 +124,9 @@
       border-bottom: 1px solid var(--border);
     }
 
-    section:last-of-type { border-bottom: none; }
+    section:last-of-type {
+      border-bottom: none;
+    }
 
     .section-eyebrow {
       font-family: var(--mono);
@@ -154,7 +180,10 @@
       max-width: 480px;
     }
 
-    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-sub strong {
+      color: var(--text);
+      font-weight: 500;
+    }
 
     .hero-badges {
       display: flex;
@@ -177,7 +206,8 @@
     }
 
     .badge-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--accent);
       flex-shrink: 0;
@@ -210,7 +240,10 @@
       border-color: var(--accent);
     }
 
-    .btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
 
     .btn-ghost {
       background: var(--bg2);
@@ -218,7 +251,10 @@
       border-color: var(--border);
     }
 
-    .btn-ghost:hover { border-color: #c4c9d4; background: var(--bg3); }
+    .btn-ghost:hover {
+      border-color: #c4c9d4;
+      background: var(--bg3);
+    }
 
     /* Hero sidebar */
     .hero-side {
@@ -243,7 +279,9 @@
       gap: 0.1rem;
     }
 
-    .side-row:last-child { border-bottom: none; }
+    .side-row:last-child {
+      border-bottom: none;
+    }
 
     .side-label {
       font-family: var(--mono);
@@ -274,7 +312,10 @@
       margin-bottom: 1rem;
     }
 
-    .about-text p strong { color: var(--text); font-weight: 500; }
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
 
     .about-note {
       margin-top: 1.5rem;
@@ -306,10 +347,19 @@
       transition: border-color 0.15s;
     }
 
-    .stat-row:hover { border-color: var(--accent-md); }
+    .stat-row:hover {
+      border-color: var(--accent-md);
+    }
 
-    .stat-label { color: var(--muted); font-weight: 400; }
-    .stat-value { color: var(--text); font-weight: 500; }
+    .stat-label {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .stat-value {
+      color: var(--text);
+      font-weight: 500;
+    }
 
     /* PROJECTS */
     .projects-list {
@@ -332,7 +382,9 @@
       transition: background 0.15s;
     }
 
-    .project-row:hover { background: var(--bg); }
+    .project-row:hover {
+      background: var(--bg);
+    }
 
     .project-index {
       font-family: var(--mono);
@@ -342,7 +394,11 @@
       min-width: 20px;
     }
 
-    .project-body { display: flex; flex-direction: column; gap: 0.5rem; }
+    .project-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
 
     .project-title {
       font-size: 0.95rem;
@@ -357,7 +413,12 @@
       line-height: 1.7;
     }
 
-    .project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.25rem; }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+    }
 
     .tag {
       font-family: var(--mono);
@@ -387,7 +448,9 @@
       transition: opacity 0.15s;
     }
 
-    .project-link:hover { opacity: 0.7; }
+    .project-link:hover {
+      opacity: 0.7;
+    }
 
     /* SKILLS */
     .skills-body {
@@ -405,9 +468,17 @@
       margin-bottom: 1rem;
     }
 
-    .skill-list { display: flex; flex-direction: column; gap: 0.9rem; }
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
 
-    .skill-item { display: flex; flex-direction: column; gap: 0.35rem; }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
 
     .skill-meta {
       display: flex;
@@ -415,8 +486,17 @@
       align-items: baseline;
     }
 
-    .skill-name { font-size: 0.88rem; font-weight: 500; color: var(--text); }
-    .skill-level { font-family: var(--mono); font-size: 0.68rem; color: var(--light); }
+    .skill-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .skill-level {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--light);
+    }
 
     .skill-track {
       height: 3px;
@@ -435,7 +515,11 @@
     }
 
     /* Timeline */
-    .timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
     .tl-item {
       display: grid;
@@ -452,10 +536,21 @@
       line-height: 1.4;
     }
 
-    .tl-content { border-left: 2px solid var(--border); padding-left: 1rem; }
+    .tl-content {
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+    }
 
-    .tl-role { font-weight: 600; color: var(--text); margin-bottom: 0.1rem; }
-    .tl-place { color: var(--muted); font-size: 0.82rem; }
+    .tl-role {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.1rem;
+    }
+
+    .tl-place {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
 
     /* FOOTER */
     footer {
@@ -475,7 +570,10 @@
       color: var(--light);
     }
 
-    .footer-links { display: flex; gap: 1.25rem; }
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+    }
 
     .footer-links a {
       font-size: 0.82rem;
@@ -485,12 +583,21 @@
       transition: color 0.15s;
     }
 
-    .footer-links a:hover { color: var(--accent); }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
 
     /* ANIMATIONS */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .reveal {
@@ -499,398 +606,475 @@
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .reveal.visible { opacity: 1; transform: none; }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      nav { padding: 0 1.25rem; }
-      .page-wrap { padding: 0 1.25rem; }
-      #hero { grid-template-columns: 1fr; }
-      .hero-side { display: none; }
-      .about-body, .skills-body { grid-template-columns: 1fr; gap: 2rem; }
-      .project-row { grid-template-columns: auto 1fr; }
-      .project-links { flex-direction: row; grid-column: 2; }
+      nav {
+        padding: 0 1.25rem;
+      }
+
+      .page-wrap {
+        padding: 0 1.25rem;
+      }
+
+      #hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-side {
+        display: none;
+      }
+
+      .about-body,
+      .skills-body {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .project-row {
+        grid-template-columns: auto 1fr;
+      }
+
+      .project-links {
+        flex-direction: row;
+        grid-column: 2;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <a class="nav-logo" href="#hero">Spencer Betchey</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills & Experience</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero">Spencer Betchey</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills & Experience</a></li>
+    </ul>
+  </nav>
 
-<div class="page-wrap">
+  <div class="page-wrap">
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-main">
-      <h1 class="hero-name">Spencer Betchey</h1>
-      <p class="hero-sub">
-        CS Junior at <strong>UW–Stout Polytechnic</strong>, building practical software and always looking for new challenges to tackle
-      </p>
-      <div class="hero-badges">
-        <span class="badge"><span class="badge-dot"></span>Open to internships</span>
-        <span class="badge">Menomonie, WI</span>
-        <span class="badge">Expected May 2027</span>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#projects">View projects</a>
-        <a class="btn btn-ghost" href="Spencer_Betchey_Resume_June2026.pdf" target="_blank">Download résumé</a>
-        <a class="btn btn-ghost" href="mailto:spencerbetchey@gmail.com">Get in touch</a>
-      </div>
-    </div>
-
-    <div class="hero-side">
-      <div class="side-row">
-        <span class="side-label">School</span>
-        <span class="side-value">UW–Stout Polytechnic</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Major</span>
-        <span class="side-value">Computer Science</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Year</span>
-        <span class="side-value">Junior</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Location</span>
-        <span class="side-value">Menomonie, WI</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">GitHub</span>
-        <span class="side-value">spencerbetchey</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Email</span>
-        <span class="side-value" style="font-size:0.78rem">spencerbetchey@gmail.com</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-eyebrow reveal">About</p>
-    <h2 class="section-title reveal">A bit about me:</h2>
-
-    <div class="about-body">
-      <div class="about-text reveal">
-        <p>
-          I'm a <strong>Junior studying Computer Science</strong> at the University of Wisconsin–Stout Polytechnic, with a concentration in Game Design and Development.
-          I'm also pursuing a minor in Mathematics. 
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-main">
+        <h1 class="hero-name">Spencer Betchey</h1>
+        <p class="hero-sub">
+          CS Junior at <strong>UW–Stout Polytechnic</strong>, building practical software and always looking for new
+          challenges to tackle
         </p>
-        <p>
-          Outside of class I enjoy working on personal projects, hanging out with friends, playing video games, and golfing.
-          I've always been passionate and competitive with anything I put my mind to. 
-        </p>
-        <p>
-          I'm actively looking for <strong>internship opportunities</strong> where I can
-          contribute my CS related skills and keep growing as a developer.
-        </p>
-        <div class="about-note">
-          → Feel free to reach out to me at: spencerbetchey@gmail.com.
+        <div class="hero-badges">
+          <span class="badge"><span class="badge-dot"></span>Open to internships</span>
+          <span class="badge">Menomonie, WI</span>
+          <span class="badge">Expected May 2027</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="Spencer_Betchey_Resume_June2026.pdf" target="_blank">Download résumé</a>
+          <a class="btn btn-ghost" href="mailto:spencerbetchey@gmail.com">Get in touch</a>
         </div>
       </div>
 
-      <div class="about-stats reveal">
-        <div class="stat-row">
-          <span class="stat-label">School</span>
-          <span class="stat-value">UW–Stout Polytechnic</span>
+      <div class="hero-side">
+        <div class="side-row">
+          <span class="side-label">School</span>
+          <span class="side-value">UW–Stout Polytechnic</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Degree</span>
-          <span class="stat-value">B.S. Computer Science</span>
+        <div class="side-row">
+          <span class="side-label">Major</span>
+          <span class="side-value">Computer Science</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Minor</span>
-          <span class="stat-value">Mathematics</span>
+        <div class="side-row">
+          <span class="side-label">Year</span>
+          <span class="side-value">Junior</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Graduation</span>
-          <span class="stat-value">May 2027</span>
+        <div class="side-row">
+          <span class="side-label">Location</span>
+          <span class="side-value">Menomonie, WI</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Interests</span>
-          <span class="stat-value">Project Dev · AI</span>
+        <div class="side-row">
+          <span class="side-label">GitHub</span>
+          <span class="side-value">spencerbetchey</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Outside CS</span>
-          <span class="stat-value">Golf · Video Games · Friends</span>
+        <div class="side-row">
+          <span class="side-label">Email</span>
+          <span class="side-value" style="font-size:0.78rem">spencerbetchey@gmail.com</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <p class="section-eyebrow reveal">Projects</p>
-    <h2 class="section-title reveal">Things I've worked on:</h2>
+    <!-- ABOUT -->
+    <section id="about">
+      <p class="section-eyebrow reveal">About</p>
+      <h2 class="section-title reveal">A bit about me:</h2>
 
-    <div class="projects-list reveal">
-
-      <div class="project-row">
-        <span class="project-index">01</span>
-        <div class="project-body">
-          <h3 class="project-title">Litescript Interpreter</h3>
-          <p class="project-desc">
-            A mini programming language interpreter built in Java, capable of evaluating mathematical expressions, storing variables, and executing conditional logic. Implements the three core stages of a real interpreter: lexing, parsing, and evaluation.
+      <div class="about-body">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Junior studying Computer Science</strong> at the University of Wisconsin–Stout Polytechnic,
+            with a concentration in Game Design and Development.
+            I'm also pursuing a minor in Mathematics.
           </p>
-          <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">Abstract Syntax Tree</span>
-            <span class="tag">Unit Testing</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="https://github.com/spencerbetchey/litescript-interpreter" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-row">
-        <span class="project-index">02</span>
-        <div class="project-body">
-          <h3 class="project-title">Graph Pathfinder</h3>
-          <p class="project-desc">
-            A command-line graph pathfinding application built in C++ that loads weighted graphs from text files and finds shortest paths using Breadth First Search (BFS) and Dijkstra's Algorithm. Features graph visualization through adjacency lists, interactive pathfinding queries, and comprehensive unit testing of graph operations and file parsing.
+          <p>
+            Outside of class I enjoy working on personal projects, hanging out with friends, playing video games, and
+            golfing.
+            I've always been passionate and competitive with anything I put my mind to.
           </p>
-          <div class="project-tags">
-            <span class="tag">C++</span>
-            <span class="tag">Graph Theory</span>
-            <span class="tag">Algorithm Design</span>
-          </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="https://github.com/spencerbetchey/graph-pathfinder" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-row">
-        <span class="project-index">03</span>
-        <div class="project-body">
-          <h3 class="project-title">Budget Tracker</h3>
-          <p class="project-desc">
-            A full stack web application for tracking personal income and expenses, built with PHP, MySQL, and Bootstrap 5. Features live income and expense summaries, a running balance, and full Create, Read, and Delete database operations through a clean responsive interface.
+          <p>
+            I'm actively looking for <strong>internship opportunities</strong> where I can
+            contribute my CS related skills and keep growing as a developer.
           </p>
-          <div class="project-tags">
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Bootstrap</span>
+          <div class="about-note">
+            → Feel free to reach out to me at: spencerbetchey@gmail.com.
           </div>
         </div>
-        <div class="project-links">
-          <a class="project-link" href="https://github.com/spencerbetchey/budget-tracker" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
 
-      <div class="project-row">
-        <span class="project-index">04</span>
-        <div class="project-body">
-          <h3 class="project-title">Hazard Hotel</h3>
-          <p class="project-desc">
-            A puzzle game programmed in Godot that uses a custom switchboard controller. Co-developed with a team for SGX Fall 2025 over the course of a semester in my Junior year Game Design class.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Godot</span>
-            <span class="tag">GDScript</span>
-            <span class="tag">Level Design</span>
+        <div class="about-stats reveal">
+          <div class="stat-row">
+            <span class="stat-label">School</span>
+            <span class="stat-value">UW–Stout Polytechnic</span>
           </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="https://jimmyneutralz.itch.io/hazard-hotel" target="_blank">Itch.io ↗</a>
-        </div>
-      </div>
-
-      <div class="project-row">
-        <span class="project-index">05</span>
-        <div class="project-body">
-          <h3 class="project-title">Town of Fog</h3>
-          <p class="project-desc">
-            A 2D sidescroller turn based combat game programmed in Unity using C#. Co-developed with a team for SGX Fall 2024 over the course of a semester in my Sophomore year Game Design class.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-            <span class="tag">Agile Methodology</span>
+          <div class="stat-row">
+            <span class="stat-label">Degree</span>
+            <span class="stat-value">B.S. Computer Science</span>
           </div>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="https://alpharay7.itch.io/town-of-fog-alpha" target="_blank">Itch.io ↗</a>
+          <div class="stat-row">
+            <span class="stat-label">Minor</span>
+            <span class="stat-value">Mathematics</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Graduation</span>
+            <span class="stat-value">May 2027</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Interests</span>
+            <span class="stat-value">Project Dev · AI</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Outside CS</span>
+            <span class="stat-value">Golf · Video Games · Friends</span>
+          </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section-eyebrow reveal">Projects</p>
+      <h2 class="section-title reveal">Things I've worked on:</h2>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <p class="section-eyebrow reveal">Skills &amp; Experience</p>
-    <h2 class="section-title reveal">What I work with:</h2>
+      <div class="projects-list reveal">
 
-    <div class="skills-body">
-
-      <div class="reveal">
-        <p class="skill-group-label">Languages &amp; Tools</p>
-        <div class="skill-list">
-
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">Python</span>
-              <span class="skill-level">Proficient</span>
+        <div class="project-row">
+          <span class="project-index">01</span>
+          <div class="project-body">
+            <h3 class="project-title">Litescript Interpreter</h3>
+            <p class="project-desc">
+              A mini programming language interpreter built in Java, capable of evaluating mathematical expressions,
+              storing variables, and executing conditional logic. Implements the three core stages of a real
+              interpreter: lexing, parsing, and evaluation.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Abstract Syntax Tree</span>
+              <span class="tag">Unit Testing</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.85"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/spencerbetchey/litescript-interpreter"
+              target="_blank">GitHub ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">Java</span>
-              <span class="skill-level">Proficient</span>
+        <div class="project-row">
+          <span class="project-index">02</span>
+          <div class="project-body">
+            <h3 class="project-title">Graph Pathfinder</h3>
+            <p class="project-desc">
+              A command-line graph pathfinding application built in C++ that loads weighted graphs from text files and
+              finds shortest paths using Breadth First Search (BFS) and Dijkstra's Algorithm. Features graph
+              visualization through adjacency lists, interactive pathfinding queries, and comprehensive unit testing of
+              graph operations and file parsing.
+            </p>
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Graph Theory</span>
+              <span class="tag">Algorithm Design</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.80"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/spencerbetchey/graph-pathfinder" target="_blank">GitHub
+              ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-level">Comfortable</span>
+        <div class="project-row">
+          <span class="project-index">03</span>
+          <div class="project-body">
+            <h3 class="project-title">Budget Tracker</h3>
+            <p class="project-desc">
+              A full stack web application for tracking personal income and expenses, built with PHP, MySQL, and
+              Bootstrap 5. Features live income and expense summaries, a running balance, and full Create, Read, and
+              Delete database operations through a clean responsive interface.
+            </p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.70"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/spencerbetchey/budget-tracker" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">C++</span>
-              <span class="skill-level">Comfortable</span>
+        <div class="project-row">
+          <span class="project-index">04</span>
+          <div class="project-body">
+            <h3 class="project-title">Hazard Hotel</h3>
+            <p class="project-desc">
+              A puzzle game programmed in Godot that uses a custom switchboard controller. Co-developed with a team for
+              SGX Fall 2025 over the course of a semester in my Junior year Game Design class.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Godot</span>
+              <span class="tag">GDScript</span>
+              <span class="tag">Level Design</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.75"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://jimmyneutralz.itch.io/hazard-hotel" target="_blank">Itch.io ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">C#</span>
-              <span class="skill-level">Proficient</span>
+        <div class="project-row">
+          <span class="project-index">05</span>
+          <div class="project-body">
+            <h3 class="project-title">Town of Fog</h3>
+            <p class="project-desc">
+              A 2D sidescroller turn based combat game programmed in Unity using C#. Co-developed with a team for SGX
+              Fall 2024 over the course of a semester in my Sophomore year Game Design class.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Agile Methodology</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.85"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://alpharay7.itch.io/town-of-fog-alpha" target="_blank">Itch.io ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">HTML &amp; CSS</span>
-              <span class="skill-level">Comfortable</span>
+        <div class="project-row">
+          <span class="project-index">06</span>
+          <div class="project-body">
+            <h3 class="project-title">Customer Churn Prediction</h3>
+            <p class="project-desc">
+              A machine learning project built in Python that predicts whether a telecom customer is likely to cancel their service. Compares Logistic Regression, Random Forest, and XGBoost models, uses SHAP to explain predictions, and includes an interactive Streamlit app for predicting customer churn risk.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Data Science</span>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.75"></div></div>
           </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/spencerbetchey/customer-churn-prediction"
+              target="_blank">GitHub ↗</a>
+          </div>
+        </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">SQL &amp; PHP</span>
-              <span class="skill-level">Learning</span>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="section-eyebrow reveal">Skills &amp; Experience</p>
+      <h2 class="section-title reveal">What I work with:</h2>
+
+      <div class="skills-body">
+
+        <div class="reveal">
+          <p class="skill-group-label">Languages &amp; Tools</p>
+          <div class="skill-list">
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Python</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.85"></div>
+              </div>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.50"></div></div>
-          </div>
 
-          <div class="skill-item">
-            <div class="skill-meta">
-              <span class="skill-name">Git &amp; GitHub</span>
-              <span class="skill-level">Comfortable</span>
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Java</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.80"></div>
+              </div>
             </div>
-            <div class="skill-track"><div class="skill-fill" data-w="0.75"></div></div>
-          </div>
 
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level">Comfortable</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.70"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">C++</span>
+                <span class="skill-level">Comfortable</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.75"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">C#</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.85"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">HTML &amp; CSS</span>
+                <span class="skill-level">Comfortable</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.75"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">SQL &amp; PHP</span>
+                <span class="skill-level">Learning</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.50"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name">Git &amp; GitHub</span>
+                <span class="skill-level">Comfortable</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-fill" data-w="0.75"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="skill-group-label">Education &amp; Experience</p>
+          <div class="timeline">
+
+            <div class="tl-item">
+              <span class="tl-date">Education</span>
+              <div class="tl-content">
+                <p class="tl-role">B.S. Computer Science</p>
+                <p class="tl-place">UW–Stout Polytechnic · Expected May 2027</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-date">Relevant<br>Experience</span>
+              <div class="tl-content">
+                <p class="tl-role">Seasonal IT Service Desk Specialist</p>
+                <p class="tl-place">Nasco Education · Summer 2026</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-date">Relevant<br>Courses</span>
+              <div class="tl-content">
+                <p class="tl-role">Coursework</p>
+                <p class="tl-place">Data Structures · Algorithms · Software Engineering · Databases</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="tl-date">Club</span>
+              <div class="tl-content">
+                <p class="tl-role">IGDA</p>
+                <p class="tl-place">UW–Stout Polytechnic · Member</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-left">© 2026 Spencer Betchey — Built with HTML, CSS &amp; JS</span>
+        <div class="footer-links">
+          <a href="https://github.com/spencerbetchey" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/spencer-betchey" target="_blank">LinkedIn</a>
+          <a href="mailto:spencerbetchey@gmail.com">Email</a>
         </div>
       </div>
+    </footer>
 
-      <div class="reveal">
-        <p class="skill-group-label">Education &amp; Experience</p>
-        <div class="timeline">
+  </div><!-- /page-wrap -->
 
-          <div class="tl-item">
-            <span class="tl-date">Education</span>
-            <div class="tl-content">
-              <p class="tl-role">B.S. Computer Science</p>
-              <p class="tl-place">UW–Stout Polytechnic · Expected May 2027</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <span class="tl-date">Relevant<br>Experience</span>
-            <div class="tl-content">
-              <p class="tl-role">Seasonal IT Service Desk Specialist</p>
-              <p class="tl-place">Nasco Education · Summer 2026</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <span class="tl-date">Relevant<br>Courses</span>
-            <div class="tl-content">
-              <p class="tl-role">Coursework</p>
-              <p class="tl-place">Data Structures · Algorithms · Software Engineering · Databases</p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <span class="tl-date">Club</span>
-            <div class="tl-content">
-              <p class="tl-role">IGDA</p>
-              <p class="tl-place">UW–Stout Polytechnic · Member</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-left">© 2026 Spencer Betchey — Built with HTML, CSS &amp; JS</span>
-      <div class="footer-links">
-        <a href="https://github.com/spencerbetchey" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/spencer-betchey" target="_blank">LinkedIn</a>
-        <a href="mailto:spencerbetchey@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
-
-</div><!-- /page-wrap -->
-
-<script>
-  // Nav shadow on scroll
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
-      }
+  <script>
+    // Nav shadow on scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
     });
-  }, { threshold: 0.08 });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
 
-  // Skill bars
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const w = entry.target.getAttribute('data-w') || '1';
-        setTimeout(() => { entry.target.style.transform = `scaleX(${w})`; }, 200);
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  document.querySelectorAll('.skill-fill').forEach(el => skillObserver.observe(el));
-</script>
+    // Skill bars
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const w = entry.target.getAttribute('data-w') || '1';
+          setTimeout(() => { entry.target.style.transform = `scaleX(${w})`; }, 200);
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.skill-fill').forEach(el => skillObserver.observe(el));
+  </script>
 </body>
+
 </html>
